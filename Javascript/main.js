@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
     document.getElementById("ChangePasswordButton").onclick = function () {
         location.href = "ChangePassword.ejs";
     }
