@@ -15,9 +15,11 @@ h1{
 .Login{
     top: 100px;
     position: relative;
-    width: 300px;
     transition: .5s;
     display: block;
+    width: 85%;
+    padding: 10px 30px;
+    margin: auto;
 }
 
 #Username{
@@ -40,10 +42,4 @@ h1{
 
 }
 
-.Login{
-    width: 85%;
-    padding: 10px 30px;
-    display: block;
-    margin: auto;
-}
 
