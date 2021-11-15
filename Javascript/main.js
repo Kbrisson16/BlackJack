@@ -1,6 +1,6 @@
 window.onload = function () {
     document.getElementById("ChangePasswordButton").onclick = function () {
-        location.href = "ChangePassword.ejs";
+        location.href = "ChangePassword.html";
     }
     document.getElementById("DeleteAccountButton").onclick = function () {
         location.href = "DeleteAccount.ejs";

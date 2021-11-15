@@ -19,6 +19,18 @@ li a{
 html{
     background-color: green;
 }
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+.centerimage{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 button.SettingButton{
     background-color: #4CAF50; /* Green */
     border: none;
@@ -30,5 +42,3 @@ button.SettingButton{
     font-size: 16px;
     width: 190px
 }
-
-
