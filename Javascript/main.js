@@ -3,7 +3,7 @@ window.onload = function () {
         location.href = "ChangePassword.html";
     }
     document.getElementById("DeleteAccountButton").onclick = function () {
-        location.href = "DeleteAccount.ejs";
+        location.href = "DeleteAccount.html";
     }
     document.getElementById("SavePasswordButton").onclick = function () {
         location.href = "Settings.html";
