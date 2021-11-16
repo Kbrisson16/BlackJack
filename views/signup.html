@@ -8,7 +8,7 @@
     <title>Signup Page</title>
     <link rel="stylesheet" href="../CSS/Login.css">
     <link rel="stylesheet" href="../CSS/Main.css">
-    
+
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -35,27 +35,31 @@
     </nav>
 </head>
 <body>
-    <form method="POST" action="signup">
-        <div class="form-group pad-nav container">
-            <labal>Email</labal>
-            <input type="text" placeholder="email" name="email" class="form-control"> 
+    <div class="box">
+        <div class="form-box">
+            <form>
+                <div class="form-group pad-nav container signup">
+                    <labal for="Email" >Email</labal>
+                    <input type="text" placeholder="email" name="email" id="Email" class="form-control"><br>
+                </div>
+                <div class="form-group container signup">
+                    <label for="firstName">First Name</label>
+                    <input type="text"  name="firstName" id="firstName" class="form-control"><br>
+                </div>
+                <div class="form-group container signup">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" id="lastName" class="form-control"><br>
+                </div>
+                <div class="form-group container signup">
+                    <label for="Password">Password</label>
+                    <input type="Password" name="Password" id="Password" class="form-control"><br>
+                </div>
+                <div class="form-group container signup">
+                    <label for="CPassword">Confirm Password: </label>
+                    <input type="Password" name="Cpassword" id="CPassword" class="form-control"><br>
+                </div>
+            </form>
         </div>
-        <div class="form-group container">
-            <label>First Name</label>
-            <input type="text" placeholder="first name" name="first name" class="title-pad form-control">
-        </div>
-        <div class="form-group container">
-            <label>Last Name</label>
-            <input type="text" placeholder="first name" name="last name" class="form-control">
-        </div>
-        <div class="form-group container">
-            <label>Password</label>
-            <input type="text" placeholder="password" name="password" class="form-control">
-        </div>
-        <div class="form-group container">
-            <label>Confirm Password</label>
-            <input type="text" placeholder="password" name="password" class="form-control">
-        </div>
-    </form>
+    </div>
 </body>
 </html>
