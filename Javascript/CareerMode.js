@@ -4,8 +4,25 @@ var jsbApp = {};
 session = window.sessionStorage;
 
 let fName, lName;
-
+``
 window.addEventListener('beforeunload', function(e) {
+    if( !session.getItem('firstname') == "" && !session.getItem('lastname') == ""){
+        //api call
+        var xhr = new XMLHttpRequest();
+        var url = "https://localhost:7042/Leaderboard"
+
+        var value = {
+            "firstName": session.getItem('firstname'),
+            "lastName": session.getItem('lastname'),
+            "wins": jsbApp.wins
+        }
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        var json = JSON.stringify(value)
+        xhr.send(json);
+    }
+
+
     session.clear();
 });
 
