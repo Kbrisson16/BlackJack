@@ -4,9 +4,6 @@ window.onload = function () {
     Http.open("GET", url);
     Http.send();
     Http.onreadystatechange = (e) => {
-        document.getElementById("Slot1Name").innerHTML = "no data loaded";
-        document.getElementById("Slot1LName").innerHTML = Http.responseText;
-        var jsonData = Http.responseText;
         var data = Http.responseText;
         var objects = JSON.parse(data)
 
@@ -25,14 +22,5 @@ window.onload = function () {
         document.getElementById("Slot5Name").innerHTML = objects[4].firstName;
         document.getElementById("Slot5LName").innerHTML = objects[4].lastName;
         document.getElementById("Slot5Wins").innerHTML = objects[4].wins;
-
-
-
-
-
     }
-
-
-
-
 }
