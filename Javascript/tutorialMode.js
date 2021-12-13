@@ -81,7 +81,7 @@ var newGame = function () {
 
     // draw the hands if neither won on the initial deal
     drawHands();
-    //advise();
+    advise();
     jsbApp.buttonBox.classList.remove("hidden"); // show hit/stay buttons
     jsbApp.textUpdates.innerHTML = "The initial hands are dealt!";
 
@@ -241,16 +241,16 @@ jsbApp.hitButton.addEventListener("click", function () {
     if (handVal > 21)
     {
         bust();
-        //advise();
+        advise();
         return;
     }
     else if (handVal === 21)
     {
         victory();
-        //advise();
+        advise();
         return;
     }
-    //advise();
+    advise();
     jsbApp.textUpdates.innerHTML = "Hit or stay?</p>";
     return;
 });
@@ -270,7 +270,7 @@ jsbApp.stayButton.addEventListener("click", function stayLoop() {
         jsbApp.buttonBox.classList.add("hidden"); // take away the hit and stay buttons
         var handVal = handTotal(jsbApp.dealerHand);
         jsbApp.gameStatus = 1; // enter the 'stay' loop
-        //advise(); // clear advise
+        advise(); // clear advise
         jsbApp.textUpdates.innerHTML = "The dealer reveals their hidden card";
         drawHands();
         setTimeout(stayLoop, 750); // return to the stay loop
@@ -391,7 +391,7 @@ var softCheck = function (hand) {
     return false; // the hand is hard, i.e. it has only one possible value
 }
 
-/**var advise = function () {
+var advise = function () {
     // no advise if player has no choices
     if (jsbApp.gameStatus > 0)
     {
@@ -439,4 +439,4 @@ var softCheck = function (hand) {
         console.log("Error: Player's hand was " + playerTotal + " and dealer's faceup was " + dealerUp + ".");
     }
     return;
-}**/
+}

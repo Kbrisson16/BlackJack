@@ -1,10 +1,33 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="stylesheet" type="text/css" href="../CSS/Main.css">
     <link rel="stylesheet" type="text/css" href="../CSS/GameCSS.css">
     <meta charset="utf-8" />
     <title>Blackjack Stars Career Mode</title>
 </head>
 <body>
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" href="Main.html">Homepage</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="CareerMode.html">Career Mode</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="tutorialMode.html">Tutorial</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="leaderboard.html">Leaderboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="settings.html">Settings</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <h1>Blackjack Stars</h1>
 <div class="textupdates" id="textUpdates">
     Press 'New Game' to begin!
@@ -29,20 +52,24 @@
         </th>
     </tr>
     <tr>
-        <td id="pcards">No cards dealt yet</td>
-        <td id="dcards">No cards dealt yet</td>
+        <td id="playerCards">No cards dealt yet</td>
+        <td id="dealerCards">No cards dealt yet</td>
 
     </tr>
 </table>
+<div id="tracker" class="buttonbox">
+    <p>Wins: 0 Draws: 0 Losses: 0</p>
+</div>
 <div class="buttonbox">
-    <p><span class="bold" >simple strategy suggestion: </span></p>
     <span id="choice" class="bold redcard"></span>
-
+    <!--<br />
+    <br />
+    <img src="img/stratchart.png" />-->
 </div>
 
 
 
-<script src="../Javascript/CareerMode.js"></script>
+<script src="../Javascript/tutorialMode.js"></script>
 </body>
 
 </html>
