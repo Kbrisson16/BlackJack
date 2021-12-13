@@ -14,3 +14,15 @@ table.center {
 .center:nth-child(3) {
   background: #cd7f32;
 }
+
+th {
+    padding: 10px;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
