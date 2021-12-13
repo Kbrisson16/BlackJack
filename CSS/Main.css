@@ -21,9 +21,10 @@ html{
 }
 
 h1{
-    color: green;
+    color: limegreen;
     text-align: center;
 }
+
 
 .centerimage{
     margin-left: auto;
@@ -51,7 +52,7 @@ button.SettingButton{
 
 
 p{
-    color: green;
+    color: limegreen;
 }
   
 #landing-page{
@@ -117,4 +118,3 @@ p{
     background:darkgreen;
     color:white;
   }
-  
