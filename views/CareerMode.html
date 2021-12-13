@@ -31,21 +31,20 @@
 <h1>Blackjack Stars</h1>
 <div class="textupdates" id="textUpdates">
   Press 'New Game' to begin!
-
-
 </div>
-
 <div class="buttonbox" id="newgame">
-  <form>
+
+  <form id="register">
     <div class="form-group pad-nav container">
       <label>First Name</label>
-      <input type="text" placeholder="name" name="name" class="form-control" required>
+      <input type="text" id="firstName" name="name" class="form-control" required>
     </div>
     <div class="form-group container">
       <label>Last Name</label>
-      <input type="text" placeholder="name" name="name" class="title-pad form-control" required>
+      <input type="text" id="lastName" name="name" class="title-pad form-control" required>
     </div>
   </form>
+
   <button alt="play" id="play">New Game</button>
 </div>
 <div class="buttonbox hidden" id="buttonBox">
