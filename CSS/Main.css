@@ -21,7 +21,7 @@ html{
 }
 
 h1{
-    color: white;
+    color: green;
     text-align: center;
 }
 
@@ -32,7 +32,7 @@ h1{
 }
 
 button.SettingButton{
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -47,3 +47,74 @@ button.SettingButton{
     background-color: black;
     color: white;
   }
+
+
+
+p{
+    color: green;
+}
+  
+#landing-page{
+    background-size:cover;
+    padding:0 30px;
+    height:105vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background-position:center;
+    background-image:url('../views/blackjackace.png');
+  }
+
+
+  body{
+    color:black;
+    margin:0;
+    font-family: 'Times New Roman', Times, serif, "Gill Sans Extrabold", sans-serif;
+    font-size:17px;
+    line-height:1.9;
+  }
+  
+
+  #landing-page p{
+    font-size:60px;
+  }
+  
+  #intro{
+    text-align:center;
+    padding:20px;
+    background:lightgreen;
+    color:white;
+  }
+
+  #landing-page h1{
+    font-size:50px;
+  }
+  
+  
+  #intro-2{
+    padding:20px;
+    text-align:center;
+    background:darkgreen;
+    color: white;
+  }
+  
+  #intro-3 .feature-2{
+    background:darkgreen;
+    color: white;
+  }
+
+  #intro-3{
+    display:flex;
+  }
+  
+  #intro-3 div{
+    padding:20px;
+  }
+  
+  #intro-3 .feature-1, #intro-3 .feature-3{
+    background:darkgreen;
+    color:white;
+  }
+  
