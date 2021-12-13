@@ -1,28 +1,7 @@
-// blackjack.js
-// A simple 'vanilla' JavaScript implementation of blackjack
-
-// Know Issues:
-// "Simple stratgey" is a massive oversimplification
-
-//console.log("Script link success!");
-
-// Object creation helper function from JavaScript: The Good Parts
-/*
-if (typeof Object.create !== 'function') {
-    Object.create = function (o) {
-        var F = function () { };
-        F.prototype = o;
-        return new F();
-    }
-};*/
-
-// an object to hold all of the variables for the blackjack app
-// to avoid global variable drama
 var jsbApp = {};
 
-// Store important elements in variables for later manipulation
-jsbApp.pcards = document.getElementById('pcards');
-jsbApp.dcards = document.getElementById('dcards');
+jsbApp.playerCards = document.getElementById('playerCards');
+jsbApp.dealerCards = document.getElementById('dealerCards');
 jsbApp.hitButton = document.getElementById('hit');
 jsbApp.stayButton = document.getElementById('stay');
 jsbApp.playButton = document.getElementById('play');
@@ -34,17 +13,16 @@ jsbApp.tracker = document.getElementById('tracker');
 jsbApp.newgame = document.getElementById('newgame');
 jsbApp.choice = document.getElementById('choice');
 
-// initialize variables to track hands/cards/etc.
 jsbApp.playerHand = [];
 jsbApp.dealerHand = [];
 jsbApp.deck = [];
 jsbApp.suits = ['clubs <span class="bold">&#9827</span>', 'diamonds <span class="redcard">&#9830</span>', 'hearts <span class="redcard">&#9829</span>', 'spades <span class="bold">&#9824</span>'];
 jsbApp.values = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"];
-jsbApp.gameStatus = 0; // flag that game has not yet been won
-jsbApp.wins = 0; // flag that game has not yet been won
-jsbApp.draws = 0; // flag that game has not yet been won
-jsbApp.losses = 0; // flag that game has not yet been won
-jsbApp.games = 0; // flag that game has not yet been won
+jsbApp.gameStatus = 0;
+jsbApp.wins = 0;
+jsbApp.draws = 0;
+jsbApp.losses = 0;
+jsbApp.games = 0;
 
 // Object Constructor for a card. !!! ALWAYS USE NEW WHEN MAKING A NEW CARD!!!
 function card(suit, value, name) {
@@ -59,8 +37,8 @@ var newGame = function () {
     jsbApp.newgame.classList.add("hidden");
 
     // reset text and variables for newgame
-    jsbApp.dcards.innerHTML = "";
-    jsbApp.dcards.innerHTML = "";
+    jsbApp.dealerCards.innerHTML = "";
+    jsbApp.dealerCards.innerHTML = "";
     jsbApp.playerHand = [];
     jsbApp.dealerHand = [];
     jsbApp.gameStatus = 0;
@@ -142,16 +120,16 @@ var createDeck = function () {
 // Update the screen with the contents of the player and dealer hands
 var drawHands = function () {
     var htmlswap = "";
-    var ptotal = handTotal(jsbApp.playerHand);
-    var dtotal = handTotal(jsbApp.dealerHand);
+    var playerHandTotal = handTotal(jsbApp.playerHand);
+    var dealerHandtTotal = handTotal(jsbApp.dealerHand);
     htmlswap += "<ul>";
     for (var i = 0; i < jsbApp.playerHand.length; i++)
     {
         htmlswap += "<li>" + jsbApp.playerHand[i].name + "</li>";
     }
     htmlswap += "</ul>"
-    jsbApp.pcards.innerHTML = htmlswap;
-    jsbApp.phandtext.innerHTML = "Your Hand (" + ptotal + ")"; // update player hand total
+    jsbApp.playerCards.innerHTML = htmlswap;
+    jsbApp.phandtext.innerHTML = "Your Hand total is (" + playerHandTotal + ")"; // update player hand total
     if (jsbApp.dealerHand.length == 0)
     {
         return;
@@ -166,7 +144,7 @@ var drawHands = function () {
     }
     else
     {
-        jsbApp.dhandtext.innerHTML = "Dealer's Hand (" + dtotal + ")"; // update dealer hand total
+        jsbApp.dhandtext.innerHTML = "Dealer's Hand (" + dealerHandtTotal + ")"; // update dealer hand total
     }
 
     for (var i = 0; i < jsbApp.dealerHand.length; i++) {
@@ -180,7 +158,7 @@ var drawHands = function () {
         htmlswap += "<li>" + jsbApp.dealerHand[i].name + "</li>";
     }
     htmlswap += "</ul>"
-    jsbApp.dcards.innerHTML = htmlswap;
+    jsbApp.dealerCards.innerHTML = htmlswap;
     //console.log("Player has " + jsbApp.playerHand.length + " cards, dealer has " + jsbApp.dealerHand.length + " cards, and deck has " + jsbApp.deck.length + " cards.");
 
 };
@@ -215,8 +193,7 @@ var handTotal = function (hand) {
 var shuffle = function (deck) {
     // console.log("Begin shuffle...");
     var shuffledDeck = [];
-    var deckL = deck.length;
-    for (var a = 0; a < deckL; a++)
+    for (var a = 0; a < deck.length; a++)
     {
         var randomCard = getRandomInt(0, (deck.length));
         shuffledDeck.push(deck[randomCard]);
