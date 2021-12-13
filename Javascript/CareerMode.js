@@ -1,5 +1,17 @@
 var jsbApp = {};
 
+// temporary session storage
+session = window.sessionStorage;
+
+let fName, lName;
+
+window.addEventListener('beforeunload', function(e) {
+    session.clear();
+});
+
+//let fName = document.querySelector("#firstName").value;
+//let lName = document.querySelector("#lastName").value;
+
 jsbApp.playerCards = document.getElementById('playerCards');
 jsbApp.dealerCards = document.getElementById('dealerCards');
 jsbApp.hitButton = document.getElementById('hit');
@@ -33,6 +45,16 @@ function card(suit, value, name) {
 
 
 var newGame = function () {
+
+    if (session.getItem("visibility") != "hidden") {
+        session.setItem("visibility", "hidden");
+        session.setItem("firstname", document.querySelector("#firstName").value);
+        session.setItem("lastname", document.querySelector("#lastName").value);
+    }
+
+    if (session.getItem("visibility") == "hidden") {
+        document.getElementById("register").style.visibility = "hidden";
+    }
     // remove newgame button and show hit/stay buttons
     jsbApp.newgame.classList.add("hidden");
 
