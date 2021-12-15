@@ -21,8 +21,7 @@ window.addEventListener('beforeunload', function(e) {
         var json = JSON.stringify(value)
         xhr.send(json);
     }
-
-
+    leaveReq();
     session.clear();
 });
 
@@ -479,3 +478,7 @@ var softCheck = function (hand) {
     }
     return;
 }**/
+
+var leaveReq = function () {
+    alert("You are about to navigate away from the page! Are you sure?");
+}

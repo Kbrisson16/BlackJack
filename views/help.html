@@ -2,13 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Jack History Page</title>
+    <title>Help Page</title>
 
     <link rel="stylesheet" href="../CSS/Main.css">
-    <link rel="stylesheet" href="../CSS/Leaderboard.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/GameCSS.css">
-    <script type="text/javascript" src="../Javascript/leaderboard.js"></script>
 
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
@@ -34,12 +30,26 @@
             </ul>
         </div>
     </nav>
+
 </head>
+<body>
 <audio controls autoplay>
     <source src="../views/impossible.mp3" type="audio/mpeg">
-  Your browser isn't supported.
-  </audio>
-<body>
-    <h1 style="color:black">History</h1><br>
+    Your browser isn't supported.
+</audio>
+<section id="intro">
+    <h3>Navigate to this page to read the rules of blackjack</h3>
+    <a href="https://bicyclecards.com/how-to-play/blackjack/" onclick="myFunction()">Bicycle: The rules of Black Jack</a>
+</section>
+<section id="intro-2">
+    <h3>Navigate to this page to watch a video of how to play blackjack</h3>
+    <a href="https://youtu.be/eyoh-Ku9TCI" onclick="myFunction()">How to play Black Jack</a>
+</section>
+<script>
+    function myFunction() {
+        alert("You are about to navigate away from this page!");
+    }
+</script>
+
 </body>
 </html>

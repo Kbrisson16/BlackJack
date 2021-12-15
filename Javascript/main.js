@@ -8,7 +8,6 @@ window.onload = function () {
     document.getElementById("SavePasswordButton").onclick = function () {
         location.href = "Settings.html";
     }
-  
 }
 
 function myFunction() {
